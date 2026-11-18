@@ -99,10 +99,10 @@ merge it, and delete the branch.
 
 ## Pull Request Checklist
 
-- [ ] The branch was created from an up-to-date `main`
-- [ ] The title and description explain the change
-- [ ] Files are in the correct folder
-- [ ] A teammate other than the author has approved it
+- [x] The branch was created from an up-to-date `main`
+- [x] The title and description explain the change
+- [x] Files are in the correct folder
+- [x] A teammate other than the author has approved it
 
 ## Lab 01 Deliverables
 
@@ -120,6 +120,8 @@ merge it, and delete the branch.
 - [x] `labs/lab02/lab02.ipynb` runs top to bottom
 - [x] `labs/lab02/REPORT.md` with Table 2.1, Task 6 answers
 - [ ] Machine learning entry in `TOPIC_BANK.md`
+
+## Lab 03 Deliverables
 
 ## Running the Lab 02 Code
 
