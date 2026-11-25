@@ -36,19 +36,20 @@ CCSFEN1L-LAB-TeamErinyes/
 ├── TOPIC_BANK.md     # Running list of thesis ideas, one entry per lab
 ├── docs/             # Proposal drafts and diagrams
 └── labs/             # One folder per lab
-    ├── lab01/        # Lab 01: environment check
+    ├── lab01/        # Lab 01: paradigm scan and toolchain setup
     │   ├── env_check.py
-    │   ├── <surname>_colab_cpu.png
-    │   ├── <surname>_colab_gpu.png
-    │   └── <surname>_local.png
-    └── lab02/        # Lab 02: classical machine learning pipeline
-        ├── data.csv
-        ├── load_dataset.py
-        ├── lab02.ipynb
-        └── REPORT.md
+    │   └── <surname>_colab_cpu / colab_gpu / local .png
+    ├── lab02/        # Lab 02: classical machine learning pipeline
+    │   ├── load_dataset.py
+    │   ├── data.csv
+    │   ├── lab02.ipynb
+    │   └── REPORT.md
+    └── lab03/        # Lab 03: deep learning and vision
+        ├── lab03.ipynb
+        └── demo.ipynb
 ```
 
-Later labs go in `labs/lab03/`, `labs/lab04/`, and so on.
+Later labs go in `labs/lab04/`, `labs/lab05/`, and so on.
 
 ## Collaboration Rules
 
@@ -68,18 +69,17 @@ Format: `category/what-change-in-structure`
 | Category | Use for | Example |
 |---|---|---|
 | `setup/` | Repository structure and setup | `setup/add-repository-structure` |
-| `lab/` | Adding lab folders and files | `lab/add-lab02-folder` |
-| `docs/` | README, reports, topic bank | `docs/add-lab02-report` |
-| `fix/` | Corrections | `fix/readme-typo` |
+| `lab/` | Adding lab folders and files | `lab/add-lab03-folder` |
+| `docs/` | README, reports, topic bank | `docs/update-readme-lab03` |
+| `fix/` | Corrections | `fix/lab02-report-filename` |
 
 Use lowercase and `-` between words. Branch names must not contain spaces.
 
 ## Commit Message Examples
 
-- `Add Raju to team list`
-- `Add env_check.py to labs/lab01`
 - `Add dataset loading script for Lab 02`
-- `Add Lab 02 notebook`
+- `Add Lab 02 notebook and report`
+- `Add Lab 03 notebook and demo`
 - `Add five ideas to TOPIC_BANK.md`
 
 ## Workflow
@@ -99,36 +99,37 @@ merge it, and delete the branch.
 
 ## Pull Request Checklist
 
-- [x] The branch was created from an up-to-date `main`
-- [x] The title and description explain the change
-- [x] Files are in the correct folder
-- [x] A teammate other than the author has approved it
+- [ ] The branch was created from an up-to-date `main`
+- [ ] The title and description explain the change
+- [ ] Files are in the correct folder
+- [ ] A teammate other than the author has approved it
 
-## Lab 01 Deliverables
+## Lab Progress
 
-- [x] Repository with protected `main`
-- [x] At least four merged PRs, one per member
-- [x] Environment check screenshots (Colab CPU, Colab GPU, local) in `labs/lab01/`
-- [ ] `TOPIC_BANK.md` with at least five ideas
+| Lab | Topic | Status |
+|---|---|---|
+| Lab 01 | Paradigm scan and toolchain setup | [ ] Screenshots and five topic ideas |
+| Lab 02 | Classical machine learning pipeline | [x] Script, data, notebook, report |
+| Lab 03 | Deep learning and vision | [ ] Notebook and demo in progress |
 
-**Screenshot naming:** use your surname in lowercase, for example
+**Screenshot naming (Lab 01):** use your surname in lowercase, for example
 `macam_colab_cpu.png`, `macam_colab_gpu.png`, `macam_local.png`.
 
-## Lab 02 Deliverables
-
-- [x] `labs/lab02/load_dataset.py` (UCI dataset id 697)
-- [x] `labs/lab02/lab02.ipynb` runs top to bottom
-- [x] `labs/lab02/REPORT.md` with Table 2.1, Task 6 answers
-- [ ] Machine learning entry in `TOPIC_BANK.md`
-
-## Lab 03 Deliverables
-
-## Running the Lab 02 Code
+## Running the Lab Code
 
 ```bash
 pip install ucimlrepo pandas matplotlib scikit-learn
 python labs/lab02/load_dataset.py
 ```
+
+Open the notebooks in VS Code, Jupyter, or Google Colab and use
+**Run All** to check that they run top to bottom.
+
+## Data and AI Use
+
+- Lab 02 uses the UCI "Predict Students' Dropout and Academic Success"
+  dataset (id 697), which is publicly licensed.
+- Any AI assistant use is disclosed in each lab's `REPORT.md`.
 
 ## Submission
 
